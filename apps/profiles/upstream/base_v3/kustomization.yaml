@@ -17,7 +17,6 @@ resources:
 - ../base/service.yaml
 - ../base/service-account.yaml
 - ../overlays/istio/virtual-service.yaml
-- ../overlays/application/application.yaml
 patchesStrategicMerge:
 - deployment_patch.yaml
 configMapGenerator:
