@@ -30,8 +30,8 @@ resources:
 - ../base/role.yaml
 - ../base/service-account.yaml
 - ../base/service.yaml
-- ../overlays/istio
-- ../overlays/application
+# - ../overlays/istio
+# - ../overlays/application
 configMapGenerator:
 # We need the name to be unique without the suffix because the original name is what
 # gets used with patches
