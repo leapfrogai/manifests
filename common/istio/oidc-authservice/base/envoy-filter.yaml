@@ -13,9 +13,9 @@ spec:
         listener:
           filterChain:
             filter:
-              name: "envoy.http_connection_manager"
+              name: "envoy.filters.network.http_connection_manager"
               subFilter:
-                name: "envoy.router"
+                name: "envoy.filters.http.router"
       patch:
         # For some reason, INSERT_FIRST doesn't work
         operation: INSERT_BEFORE
@@ -36,6 +36,15 @@ spec:
                     - exact: "authorization"
                     - exact: "cookie"
                     - exact: "x-auth-token"
+                    - exact: "x-forwarded-access-token"
+                    - exact: "x-forwarded-user"
+                    - exact: "x-forwarded-email"
+                    - exact: "authorization"
+                    - exact: "x-forwarded-proto"
+                    - exact: "proxy-authorization"
+                    - exact: "user-agent"
+                    - exact: "x-forwarded-host"
+                    - exact: "from"
               authorization_response:
                 allowed_upstream_headers:
                   patterns:
