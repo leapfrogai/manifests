@@ -26,7 +26,7 @@ spec:
             '@type': type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
             http_service:
               server_uri:
-                uri: http://$(AUTHSERVICE_SERVICE).$(AUTHSERVICE_NAMESPACE).svc.cluster.local
+                uri: http://$(AUTHSERVICE_SERVICE).$(AUTHSERVICE_NAMESPACE).svc.cluster.local:8080
                 cluster: outbound|8080||$(AUTHSERVICE_SERVICE).$(AUTHSERVICE_NAMESPACE).svc.cluster.local
                 timeout: 10s
               authorization_request:
