@@ -36,15 +36,6 @@ spec:
                     - exact: "authorization"
                     - exact: "cookie"
                     - exact: "x-auth-token"
-                    - exact: "x-forwarded-access-token"
-                    - exact: "x-forwarded-user"
-                    - exact: "x-forwarded-email"
-                    - exact: "authorization"
-                    - exact: "x-forwarded-proto"
-                    - exact: "proxy-authorization"
-                    - exact: "user-agent"
-                    - exact: "x-forwarded-host"
-                    - exact: "from"
               authorization_response:
                 allowed_upstream_headers:
                   patterns:
